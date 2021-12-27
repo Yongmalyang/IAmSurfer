@@ -26,12 +26,13 @@ public class ObstacleCollider_LJY : MonoBehaviour
         //UnityEngine.Debug.Log("일단 충돌..");
         if (collision.gameObject.tag == "Player")
         {
-            UnityEngine.Debug.Log("플레이어와 충돌!!");
+            //UnityEngine.Debug.Log("플레이어와 충돌!!");
             //spriteRenderer = GameObject.Find("Surfer").GetComponent<Sprite>();
             spriteRenderer.sprite = sprites[1];
             Invoke("ReturnSprite", 0.5f);
+            UnityEngine.Debug.Log("이미지 잘 바뀜");
             PlayerController.Instance.playerData.lives--;
-            UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
+            //UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
             Destroy(gameObject);
             /*
             if(PlayerController.Instance.playerData.lives<=0)
@@ -40,7 +41,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
         else if(collision.gameObject.tag == "Wall")
         {
             PlayerController.Instance.playerData.score++;
-            UnityEngine.Debug.Log("지금 현재 점수: " + PlayerController.Instance.playerData.score);
+            //UnityEngine.Debug.Log("지금 현재 점수: " + PlayerController.Instance.playerData.score);
             ScoreText = GameObject.Find("Score Text").GetComponent<Text>();
             ScoreText.text = PlayerController.Instance.playerData.score.ToString();
             //UnityEngine.Debug.Log("벽에 충돌!!");
