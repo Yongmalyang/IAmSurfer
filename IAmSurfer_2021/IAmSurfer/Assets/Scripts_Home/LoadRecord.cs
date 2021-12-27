@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class LoadRecord : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TMP_Text txt_record;
 
-    // Update is called once per frame
-    void Update()
+    public int resource;
+    // Start is called before the first frame update
+    public void click_record()
     {
-        
+        txt_record = GetComponent<TMP_Text>();
+        //resource = PlayerController.Instance.playerData.score;
+        //txt_record.text = resource.ToString();
     }
 }
