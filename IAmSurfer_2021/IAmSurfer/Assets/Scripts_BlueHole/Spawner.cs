@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
             {
                 // 1층 스폰
                 float spawnY = Random.Range
-                    (-5.5f, 6.5f);
+                    (-2.3f, 6.5f);
                 float spawnX = Random.Range
                     (-9.5f, 9.9f);
 
