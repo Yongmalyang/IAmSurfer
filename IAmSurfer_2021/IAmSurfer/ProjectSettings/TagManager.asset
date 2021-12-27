@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EmptyWall
   - Coin
+  - BlueHole
   layers:
   - Default
   - TransparentFX

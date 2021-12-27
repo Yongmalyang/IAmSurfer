@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
                 float spawnY = Random.Range
                     (-2.3f, 6.5f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.5f);
+                    (-9.5f, 9.0f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(fistFloorEnemies[i], spawnPosition, Quaternion.identity);
@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
                 float spawnY = Random.Range
                     (5.5f, 16.5f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.5f);
+                    (-9.5f, 9.0f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(secondFloorEnemies[i], spawnPosition, Quaternion.identity);
@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
                 float spawnY = Random.Range
                     (15.5f, 25.0f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.5f);
+                    (-9.5f, 9.0f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(thirdFloorEnemies[i], spawnPosition, Quaternion.identity);
