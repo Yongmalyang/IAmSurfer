@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1421082155455833255}
   - component: {fileID: 1421082155455833254}
   - component: {fileID: 1421082155455833252}
+  - component: {fileID: 3278800558394912104}
   - component: {fileID: 4197024193966879690}
+  - component: {fileID: -1424958310268563562}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Obstacle
@@ -97,6 +99,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &3278800558394912104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421082155455833305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cc9010ca1e35545b846180bcd34eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &4197024193966879690
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -107,7 +121,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -130,3 +144,24 @@ PolygonCollider2D:
       - {x: 0.14, y: 0.015}
       - {x: 0.13696857, y: 0.048019234}
       - {x: 0.14131238, y: 0.015564069}
+--- !u!50 &-1424958310268563562
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421082155455833305}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

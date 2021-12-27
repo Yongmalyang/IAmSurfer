@@ -39,6 +39,8 @@ public class CoinManager_LJY : MonoBehaviour
         }
 
 
+
+
     }
 
     private Vector3 GetRandomPosition()
