@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setTime: 100
-  coundownText: {fileID: 75100902}
+  countdownText: {fileID: 75100902}
 --- !u!1 &901576301
 GameObject:
   m_ObjectHideFlags: 0
