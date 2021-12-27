@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1609833801754476414}
   - component: {fileID: 1609833801754476409}
   - component: {fileID: 1609833801754476408}
-  - component: {fileID: 1609833801754476415}
+  - component: {fileID: 3798569593486880383}
   m_Layer: 0
   m_Name: Ice1
   m_TagString: Obstacle
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!61 &1609833801754476415
-BoxCollider2D:
+--- !u!60 &3798569593486880383
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,6 +119,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.48}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09546803, y: 0.18529463}
+      - {x: -0.22, y: -0.13}
+      - {x: -0.22, y: -0.19}
+      - {x: -0.14999999, y: -0.19}
+      - {x: -0.11, y: -0.17999999}
+      - {x: 0, y: -0.14}
+      - {x: 0.20528081, y: 0.04813837}
+      - {x: 0.20528083, y: 0.17549103}

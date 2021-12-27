@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1421082155455833255}
   - component: {fileID: 1421082155455833254}
-  - component: {fileID: 1421082155455833253}
   - component: {fileID: 1421082155455833252}
+  - component: {fileID: 4197024193966879690}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Obstacle
@@ -84,8 +84,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1421082155455833253
-BoxCollider2D:
+--- !u!114 &1421082155455833252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421082155455833305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b94e98fac2fb984a837c25fbe22b50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!60 &4197024193966879690
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,19 +120,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.21}
-  m_EdgeRadius: 0
---- !u!114 &1421082155455833252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421082155455833305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b94e98fac2fb984a837c25fbe22b50a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
+  m_Points:
+    m_Paths:
+    - - {x: 0.13, y: 0.105}
+      - {x: -0.14999999, y: 0.105}
+      - {x: -0.14782807, y: 0.05009618}
+      - {x: -0.03, y: -0.10066025}
+      - {x: 0.01959323, y: -0.08981089}
+      - {x: 0.14, y: 0.015}
+      - {x: 0.13696857, y: 0.048019234}
+      - {x: 0.14131238, y: 0.015564069}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9039085646872543536}
   - component: {fileID: 9039085646872543549}
   - component: {fileID: 9039085646872543551}
-  - component: {fileID: 9039085646872543550}
+  - component: {fileID: -2905504895876323729}
   m_Layer: 0
   m_Name: Tube
   m_TagString: Obstacle
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!61 &9039085646872543550
-BoxCollider2D:
+--- !u!60 &-2905504895876323729
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002817817, y: -0.005635619}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.11, y: 0.17999999, z: 0.099999994, w: 0.17999999}
     pivot: {x: 0.5, y: 0.5}
@@ -119,6 +119,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.46529275, y: 0.29058534}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.13756019, y: 0.13348328}
+      - {x: -0.19461107, y: 0.08696649}
+      - {x: -0.22115278, y: -0.011698009}
+      - {x: -0.15871294, y: -0.09759063}
+      - {x: -0.121662036, y: -0.11937586}
+      - {x: 0.06792118, y: -0.14025135}
+      - {x: 0.12986568, y: -0.12821478}
+      - {x: 0.16332397, y: -0.09232218}
+      - {x: 0.18635534, y: -0.07102349}
+      - {x: 0.22820371, y: 0.041698046}
+      - {x: 0.1126805, y: 0.13937587}

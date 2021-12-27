@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:IAmSurfer_2021/IAmSurfer/Assets/Animation.meta
 guid: a96058d6504048c488fa700cddefe155
+=======
+guid: aabd14c4a3a3efb4a809a6214c2e8b00
+>>>>>>> Stashed changes:IAmSurfer_2021/IAmSurfer/Assets/Scenes/BlueHolePractice.meta
+=======
+<<<<<<< HEAD:IAmSurfer_2021/IAmSurfer/Assets/Scripts.meta
+guid: e3fd06637e525b844959a63e588fee68
+=======
+guid: a96058d6504048c488fa700cddefe155
+>>>>>>> 8ebf5d19af7e4cf02d8952e7d1884ff718c8e016:IAmSurfer_2021/IAmSurfer/Assets/Animation.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
