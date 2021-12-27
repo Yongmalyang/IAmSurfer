@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleCollide_LJY : MonoBehaviour
+public class Obstacle_LJY : MonoBehaviour
 {
 
     SpriteRenderer spriteRenderer;
@@ -16,6 +16,19 @@ public class ObstacleCollide_LJY : MonoBehaviour
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
     
+    void OnHit()
+    {
+        PlayerController.Instance.playerData.lives--;
+        Destroy(gameObject);
+    }
+
+    void OnEdge()
+    {
+        /*
+        if (collision.gameObject.tag == "BorderBullet")
+            Destroy(gameObject);
+        */
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

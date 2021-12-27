@@ -24,7 +24,6 @@ public class CoinManager_LJY : MonoBehaviour
     {
         for(int i=0; i<5; i++)
         {
-            CoinObj[i].SetActive(true);
             Vector3 spawnPos = GetRandomPosition();
             CoinObj[i].transform.position = spawnPos;
         }
