@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ObstacleCollider_LJY : MonoBehaviour
 {
     private Text ScoreText;
+    private GameObject PauseUI;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
     
@@ -26,6 +27,8 @@ public class ObstacleCollider_LJY : MonoBehaviour
             PlayerController.Instance.playerData.lives--;
             UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
             Destroy(gameObject);
+            if(PlayerController.Instance.playerData.lives<=0)
+                CallGameOver();
         }
         else if(collision.gameObject.tag == "Wall")
         {
@@ -36,5 +39,12 @@ public class ObstacleCollider_LJY : MonoBehaviour
             //UnityEngine.Debug.Log("벽에 충돌!!");
             Destroy(gameObject);
         }
+    }
+
+    void CallGameOver()
+    {
+        UnityEngine.Debug.Log("게임오버..");
+        PauseUI = GameObject.Find("BlackTransparent_pause").GetComponent<GameObject>();
+        PauseUI.SetActive(true);
     }
 }
