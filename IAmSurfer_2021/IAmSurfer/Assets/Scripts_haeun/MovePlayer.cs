@@ -8,6 +8,6 @@ public class MovePlayer : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(value.joyTouch / 50);
+        transform.Translate(value.joyTouch / 15);
     }
 }
