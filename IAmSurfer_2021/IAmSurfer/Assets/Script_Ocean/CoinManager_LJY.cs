@@ -22,24 +22,11 @@ public class CoinManager_LJY : MonoBehaviour
 
     void SpawnCoin()
     {
-
-
-        //GameObject myInstance = (GameObject) Instantiate(ObstacleObjs[0], spawnPoints[0].position, Quaternion.identity);
-        //gameObject.Add(myInstance);
-        //myInstance.GetComponent<MyChild>().Init();
-        //myInstance.SetActive(true);
-
-        //GameObject myInstance = Instantiate(ObstacleObjs[0]) as GameObject;
-        //myInstance.transform.position = spawnPoints[0].position;
-
         for(int i=0; i<5; i++)
         {
             Vector3 spawnPos = GetRandomPosition();
             CoinObj[i].transform.position = spawnPos;
         }
-
-
-
 
     }
 
@@ -50,9 +37,9 @@ public class CoinManager_LJY : MonoBehaviour
 
         //int randX = Random.Range(-8, 8);
         //int randY = Random.Range(-5, 5);
-        float posX = Random.Range(-8, 8);
-        float posY = Random.Range(-5, 5);
-        float posZ = 0;
+        float posX = Random.Range(-7.5f, 7.5f);
+        float posY = Random.Range(-4.5f, 4.5f);
+        float posZ = -2.89746f;
 
         Vector3 spawnPos = new Vector3(posX, posY, posZ);
 
