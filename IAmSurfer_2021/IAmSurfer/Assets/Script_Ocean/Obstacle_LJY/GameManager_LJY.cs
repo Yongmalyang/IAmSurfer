@@ -33,7 +33,7 @@ public class GameManager_LJY : MonoBehaviour
 
     void SpawnObstacle() 
     {
-        int randObstacle = Random.Range(0, 4);
+        int randObstacle = Random.Range(0, 5);
         int randPoint = Random.Range(0, 10);
 
         Instantiate(ObstacleObjs[randObstacle],

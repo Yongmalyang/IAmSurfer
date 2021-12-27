@@ -7,12 +7,15 @@ public class ObstacleCollider_LJY : MonoBehaviour
 {
     private Text ScoreText;
     private GameObject PauseUI;
-    SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+
+    public Sprite[] sprites;
     Rigidbody2D rigid;
     
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         //transform.rotation = Quaternion.Euler(0, 0, 30);
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -24,11 +27,15 @@ public class ObstacleCollider_LJY : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             UnityEngine.Debug.Log("플레이어와 충돌!!");
+            //spriteRenderer = GameObject.Find("Surfer").GetComponent<Sprite>();
+            spriteRenderer.sprite = sprites[1];
+            Invoke("ReturnSprite", 0.5f);
             PlayerController.Instance.playerData.lives--;
             UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
             Destroy(gameObject);
+            /*
             if(PlayerController.Instance.playerData.lives<=0)
-                CallGameOver();
+                CallGameOver();*/
         }
         else if(collision.gameObject.tag == "Wall")
         {
@@ -39,6 +46,12 @@ public class ObstacleCollider_LJY : MonoBehaviour
             //UnityEngine.Debug.Log("벽에 충돌!!");
             Destroy(gameObject);
         }
+    }
+
+    void ReturnSprite()
+    {
+        spriteRenderer.sprite = sprites[0];
+
     }
 
     void CallGameOver()
