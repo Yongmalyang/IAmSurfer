@@ -32,7 +32,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
             Invoke("ReturnSprite", 0.5f);
             UnityEngine.Debug.Log("이미지 잘 바뀜");
             PlayerController.Instance.playerData.lives--;
-            //UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
+            UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
             Destroy(gameObject);
             /*
             if(PlayerController.Instance.playerData.lives<=0)
