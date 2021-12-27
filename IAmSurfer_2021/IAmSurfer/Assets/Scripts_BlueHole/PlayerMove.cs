@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -25,6 +26,14 @@ public class PlayerMove : MonoBehaviour
     {
         Time.timeScale = 0;
         // UI 구현하기
+    }
+    // 블루홀 닿을 시 씬 이동
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "BlueHole")
+        {
+            SceneManager.LoadScene("OceanMap");
+        }
     }
 
 }
