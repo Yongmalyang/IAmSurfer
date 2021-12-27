@@ -1254,8 +1254,8 @@ GameObject:
   - component: {fileID: 863071157}
   - component: {fileID: 863071156}
   - component: {fileID: 863071155}
-  - component: {fileID: 863071154}
   - component: {fileID: 863071153}
+  - component: {fileID: 863071154}
   - component: {fileID: 863071152}
   - component: {fileID: 863071159}
   - component: {fileID: 863071160}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 863071151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16db5f308b22b7418f34b5b027dc10f, type: 3}
+  m_Script: {fileID: 11500000, guid: 704841c652e523e418a834b7747db5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 11400000, guid: 546c41055041c714a97eacf58f64ef81, type: 2}
