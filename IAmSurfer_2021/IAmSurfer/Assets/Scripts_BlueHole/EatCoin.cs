@@ -16,4 +16,5 @@ public class EatCoin : MonoBehaviour
             
         collision.gameObject.SetActive(false);
     }
+
 }

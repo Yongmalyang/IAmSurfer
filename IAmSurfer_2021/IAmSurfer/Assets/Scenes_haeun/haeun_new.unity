@@ -777,6 +777,7 @@ GameObject:
   - component: {fileID: 527298763}
   - component: {fileID: 527298765}
   - component: {fileID: 527298764}
+  - component: {fileID: 527298766}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Wall
@@ -874,6 +875,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &527298766
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527298762}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &647783079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,9 +1227,11 @@ GameObject:
   - component: {fileID: 863071154}
   - component: {fileID: 863071153}
   - component: {fileID: 863071152}
-  m_Layer: 0
+  - component: {fileID: 863071159}
+  - component: {fileID: 863071160}
+  m_Layer: 9
   m_Name: player_tmp
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1224,8 +1248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a6a0ddec434104d937fddd94820f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameControllor: {fileID: 0}
-  UILives: []
+  gameControllor: {fileID: 1363904334}
+  UILives:
+  - {fileID: 1467856983}
+  - {fileID: 752141077}
+  - {fileID: 656537321}
 --- !u!50 &863071153
 Rigidbody2D:
   serializedVersion: 4
@@ -1362,6 +1389,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &863071159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863071151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d40b51ab3b81c84e8ab87d9788577ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &863071160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863071151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de918d7c72a045342954feb499767c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setTime: 100
+  coundownText: {fileID: 75100902}
 --- !u!1 &901576301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1567,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.51, y: 0.63}
   m_EdgeRadius: 0
 --- !u!50 &997520444
 Rigidbody2D:
@@ -2029,7 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3ff6dca47fea7439fbc574018191fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 863071159}
   isOver: 0
   UICoin: {fileID: 647783080}
 --- !u!4 &1363904335
@@ -3661,6 +3714,7 @@ GameObject:
   - component: {fileID: 2044952798}
   - component: {fileID: 2044952800}
   - component: {fileID: 2044952799}
+  - component: {fileID: 2044952801}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Wall
@@ -3758,3 +3812,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2044952801
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044952797}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

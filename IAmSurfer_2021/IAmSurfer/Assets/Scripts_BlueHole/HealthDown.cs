@@ -51,7 +51,7 @@ public class HealthDown : MonoBehaviour
             }
         }
     }
-    void OffDamaged()
+    public void OffDamaged()
     {
         gameObject.layer = 9;
         spriteRenderer.color = new Color(1, 1, 1, 1);

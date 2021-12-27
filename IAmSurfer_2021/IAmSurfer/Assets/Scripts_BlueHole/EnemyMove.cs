@@ -24,12 +24,6 @@ public class EnemyMove : MonoBehaviour
         // 움직이기(속도)
         rigid.velocity = new Vector2(nextMove*speed, rigid.velocity.y);
 
-        // 양 쪽 벽 만나면 되돌아가기
-        /*
-        Vector2 frontVector = new Vector2(rigid.position.x + nextMove * 0.3f, rigid.position.y);
-        if ((rigid.position.x + nextMove) < (-7.8f) || (rigid.position.x + nextMove) > 7.8f)
-            Turn();
-        */
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

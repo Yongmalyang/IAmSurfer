@@ -26,4 +26,5 @@ public class PlayerMove : MonoBehaviour
         Time.timeScale = 0;
         // UI 구현하기
     }
+
 }
