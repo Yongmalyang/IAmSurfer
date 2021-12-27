@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlueHoleCollider_LJY : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class BlueHoleCollider_LJY : MonoBehaviour
             //PlayerController.Instance.playerData.lives--;
             //UnityEngine.Debug.Log("지금 현재 남은 목숨: " + PlayerController.Instance.playerData.lives);
             //Destroy(gameObject);
+            SceneManager.LoadScene("haeun_new");
+
         }
         else if (collision.gameObject.tag == "Wall")
         {
