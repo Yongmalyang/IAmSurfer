@@ -22,9 +22,5 @@ public class GameManager : MonoBehaviour
         player = GetComponent<PlayerMove>();
     }
     
-    public void GameOver()
-    {
-        Time.timeScale = 0;
-        // UI 구현하기
-    }
+    
 }
