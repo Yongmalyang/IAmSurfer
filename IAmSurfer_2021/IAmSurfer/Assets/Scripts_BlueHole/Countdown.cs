@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
-    [SerializeField] float setTime = 100.0f;
+    [SerializeField] public float setTime = 100.0f;
     [SerializeField] Text coundownText;
     void Start()
     {
