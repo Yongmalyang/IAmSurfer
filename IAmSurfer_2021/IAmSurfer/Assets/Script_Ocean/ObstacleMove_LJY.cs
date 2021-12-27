@@ -6,10 +6,18 @@ using UnityEngine.UI;
 public class ObstacleMove_LJY : MonoBehaviour
 {
     public float speed;
+    SpriteRenderer spriteRenderer;
+    //Rigidbody2D rigid;
 
     // Start is called before the first frame update
-    private void Awake()
+    void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        //rigid = GetComponent<Rigidbody2D>();
+        //Vector2 myVector = new Vector2(0,0);
+        //myVector.rotation = Quaternion.Euler(0, 0, 30);
+        //rigid.velocity = Vector2.right * speed;
+
 
     }
 
@@ -17,20 +25,11 @@ public class ObstacleMove_LJY : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.rotation = Quaternion.Euler(0, 0, 30);
+        transform.rotation = Quaternion.Euler(0, 0, 10);
         transform.Translate(Vector2.right * speed * Time.deltaTime);
-        PlayerController.Instance.playerData.score += 3;
-        /*
-        if (transform.position.x == 1400 || transform.position.y == 1000) {
-            transform.Translate(1400, 1000, 0);
-        }
-        */
-        /*
-        if (transform.position == (200,200,0))
-        {
-            Destroy(transform);
-        }
-        */
+        //PlayerController.Instance.playerData.score += 1;
+        
+
     }
 
     

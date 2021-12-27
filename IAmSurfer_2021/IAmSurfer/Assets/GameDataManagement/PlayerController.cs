@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 LoadGameData();
-                UnityEngine.Debug.Log("데이터 널");
+                //UnityEngine.Debug.Log("데이터 널");
                 ToGameJson();
             }
             return _gameData;
@@ -56,13 +56,13 @@ public class PlayerController : MonoBehaviour
         if (File.Exists(filePath))
         {
             print(filePath);
-            UnityEngine.Debug.Log("불러오기 성공!");
+            //UnityEngine.Debug.Log("불러오기 성공!");
             string FromJsonData = File.ReadAllText(filePath);
             _gameData = JsonUtility.FromJson<PlayerData>(FromJsonData);
         }
         else
         {
-            UnityEngine.Debug.Log("새 파일 생성!");
+            //UnityEngine.Debug.Log("새 파일 생성!");
             // _gameData = new SatelliteGameData();
             ToGameJson();
 
@@ -83,12 +83,12 @@ public class PlayerController : MonoBehaviour
     void OnApplicationQuit()
     {
         ToGameJson();
-        UnityEngine.Debug.Log("저장완료했음");
+        //UnityEngine.Debug.Log("저장완료했음");
     }
 
     void Start()
     {
-        Debug.Log("폴스면 최초실행" + PlayerPrefs.HasKey("playnumber"));
+        //Debug.Log("폴스면 최초실행" + PlayerPrefs.HasKey("playnumber"));
         if (PlayerPrefs.HasKey("key") == true)
         {
             if (gameObject.name == "DataControllerF")
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (PlayerPrefs.HasKey("key") == false) // 최초실행이면
         {
             PlayerPrefs.SetInt("key", PlayerPrefs.GetInt("key", 0)); //최초실행시 여기 저장...
-            Debug.Log("최초실행");
+            //Debug.Log("최초실행");
 
             ToGameJson(); 
 
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         {
             string path = Path.Combine(Application.dataPath, "GameDataManagement/playerData.json");
             File.WriteAllText(path, JsonUtility.ToJson(playerData));
-            UnityEngine.Debug.Log("코루틴 게임데이터 저장");
+            //UnityEngine.Debug.Log("코루틴 게임데이터 저장");
             try
             {
                 SW = new System.IO.StreamWriter(path);
