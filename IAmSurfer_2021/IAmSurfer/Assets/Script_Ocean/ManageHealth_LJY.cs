@@ -11,7 +11,9 @@ public class ManageHealth_LJY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(PlayerController.Instance.playerData.game_continue == false)
+        Time.timeScale = 1;
+
+        if (PlayerController.Instance.playerData.game_continue == false)
             GameDataReset();
     }
 
