@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ObstacleCollider_LJY : MonoBehaviour
 {
-    private Text ScoreText;
+    private TextMeshProUGUI ScoreText;
     private GameObject PauseUI;
     private SpriteRenderer spriteRenderer;
 
@@ -54,7 +55,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
         {
             PlayerController.Instance.playerData.score++;
             //UnityEngine.Debug.Log("지금 현재 점수: " + PlayerController.Instance.playerData.score);
-            ScoreText = GameObject.Find("Score Text").GetComponent<Text>();
+            ScoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
             ScoreText.text = PlayerController.Instance.playerData.score.ToString();
             //UnityEngine.Debug.Log("벽에 충돌!!");
             Destroy(gameObject);
