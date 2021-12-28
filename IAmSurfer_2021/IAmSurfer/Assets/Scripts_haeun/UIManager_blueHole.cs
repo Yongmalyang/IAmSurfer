@@ -10,4 +10,8 @@ public class UIManager_blueHole : MonoBehaviour
         SceneManager.LoadScene("Home");
 
     }
+    public void reTry()
+    {
+        SceneManager.LoadScene("OceanMap");
+    }
 }
