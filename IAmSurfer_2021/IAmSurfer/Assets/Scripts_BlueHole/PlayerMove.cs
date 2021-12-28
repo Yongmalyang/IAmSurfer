@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(collision.gameObject.tag == "BlueHole")
         {
-            SceneManager.LoadScene("OceanMap");
+            SceneManager.LoadScene("LoadingScene2");
         }
     }
 

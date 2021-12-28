@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class wait : MonoBehaviour
+public class wait_black : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
