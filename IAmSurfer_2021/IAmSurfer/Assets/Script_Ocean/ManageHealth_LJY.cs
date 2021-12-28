@@ -23,6 +23,7 @@ public class ManageHealth_LJY : MonoBehaviour
         for(int i=2; i>= lives_left; i--)
         {
             MyHealth[i].gameObject.SetActive(false);
+            MyHealth[i+3].gameObject.SetActive(true);
         }
 
         if (PlayerController.Instance.playerData.game_over == true)
@@ -43,6 +44,7 @@ public class ManageHealth_LJY : MonoBehaviour
         for (int j = 0; j<3; j++)
         {
             MyHealth[j].gameObject.SetActive(true);
+            MyHealth[j+3].gameObject.SetActive(false);
         }
     }
 }
