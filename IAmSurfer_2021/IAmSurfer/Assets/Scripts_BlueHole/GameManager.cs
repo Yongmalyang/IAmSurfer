@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class GameManager : MonoBehaviour
     Rigidbody2D rigid;
     public PlayerMove player;
     public bool isOver;
-    public Text UICoin;
+    [SerializeField] public TextMeshProUGUI UICoin;
 
     void Update()
     {
-        UICoin.text = "Coin : " + PlayerController.Instance.playerData.money.ToString();
+        UICoin.text = PlayerController.Instance.playerData.money.ToString();
     }
     private void Awake()
     {
