@@ -7,6 +7,7 @@ using TMPro;
 public class ObstacleCollider_LJY : MonoBehaviour
 {
     private TextMeshProUGUI ScoreText;
+    private TextMeshProUGUI ScoreFinalText;
     private GameObject PauseUI;
     private SpriteRenderer spriteRenderer;
 
@@ -44,10 +45,14 @@ public class ObstacleCollider_LJY : MonoBehaviour
             {
                 PlayerController.Instance.playerData.game_over = true;
                 int final_score = PlayerController.Instance.playerData.score + PlayerController.Instance.playerData.money * 2;
-                if(final_score> PlayerController.Instance.playerData.best_score)
+                ScoreText = GameObject.Find("PlayerFinalScore").GetComponent<TextMeshProUGUI>();
+                ScoreText.text = "COIN "+PlayerController.Instance.playerData.money.ToString()+"* 2 + SCORE "
+                    + PlayerController.Instance.playerData.score.ToString()+"\nYOUR SCORE: "+final_score.ToString();
+                if (final_score> PlayerController.Instance.playerData.best_score)
                 {
                     PlayerController.Instance.playerData.best_score = final_score;
                     UnityEngine.Debug.Log("최고 기록 갱신!!");
+
                 }
             }
         }
