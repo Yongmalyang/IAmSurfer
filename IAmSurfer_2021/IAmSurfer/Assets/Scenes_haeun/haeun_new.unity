@@ -2297,8 +2297,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: Restart
+      - m_Target: {fileID: 353720065}
+        m_MethodName: reTry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2903,6 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d40b51ab3b81c84e8ab87d9788577ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverWindow: {fileID: 148841499}
 --- !u!114 &863071160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,7 +3244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setTime: 100
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 956010097}
 --- !u!1 &977302350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7015,8 +7016,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ToHomeScene
+      - m_Target: {fileID: 353720065}
+        m_MethodName: goToHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

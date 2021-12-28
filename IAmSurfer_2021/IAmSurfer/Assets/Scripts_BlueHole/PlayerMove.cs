@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
-
+    public Image gameOverWindow;
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,11 +21,13 @@ public class PlayerMove : MonoBehaviour
         rigid.gravityScale = 10; // 중력 숫자 바꿔줘서 아래로 떨어지게 만들기
 
         //아래로 떨어지는 모습 조금 보여주고 GameOver 창 띄우기
-        Invoke("Gameover", 2f); 
+        Invoke("Gameover", 2f);
+        gameOverWindow.gameObject.SetActive(true);
     }
     public void Gameover()
     {
         Time.timeScale = 0;
+
         // UI 구현하기
     }
     // 블루홀 닿을 시 씬 이동
