@@ -8,7 +8,7 @@ public class SurfBoardSpawn : MonoBehaviour
     {
         // 랜덤 위치 설정
         float spawnY = Random.Range
-                    (26.1f, 27.0f);
+                    (53.9f, 55.0f);
         float spawnX = Random.Range
             (-7.3f, 7.0f);
 

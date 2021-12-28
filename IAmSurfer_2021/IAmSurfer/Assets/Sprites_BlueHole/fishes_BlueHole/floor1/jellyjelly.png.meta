@@ -117,12 +117,12 @@ TextureImporter:
       name: jellyjelly_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 64
+        x: 1
+        y: 1
+        width: 47
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,12 +138,12 @@ TextureImporter:
       name: jellyjelly_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 64
+        x: 66
+        y: 1
+        width: 47
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: jellyjelly_2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 60
-        height: 64
+        x: 130
+        y: 1
+        width: 47
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,10 +180,10 @@ TextureImporter:
       name: jellyjelly_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 60
-        height: 64
+        x: 195
+        y: 1
+        width: 47
+        height: 62
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: jellyjelly_4
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 60
-        height: 64
+        x: 256
+        y: 1
+        width: 47
+        height: 62
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

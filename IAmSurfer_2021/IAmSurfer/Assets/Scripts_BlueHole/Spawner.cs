@@ -19,9 +19,9 @@ public class Spawner : MonoBehaviour
             {
                 // 1층 스폰
                 float spawnY = Random.Range
-                    (-1.0f, 6.5f);
+                    (0f, 14.3f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.0f);
+                    (-9.5f, 9.5f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(fistFloorEnemies[i], spawnPosition, Quaternion.identity);
@@ -30,9 +30,9 @@ public class Spawner : MonoBehaviour
             {
                 // 2층 스폰
                 float spawnY = Random.Range
-                    (5.5f, 16.5f);
+                    (14.3f, 34.4f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.0f);
+                    (-9.5f, 9.5f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(secondFloorEnemies[i], spawnPosition, Quaternion.identity);
@@ -41,9 +41,9 @@ public class Spawner : MonoBehaviour
             {
                 // 3층 스폰
                 float spawnY = Random.Range
-                    (15.5f, 25.0f);
+                    (34.4f, 52.1f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.0f);
+                    (-9.5f, 9.5f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(thirdFloorEnemies[i], spawnPosition, Quaternion.identity);
@@ -56,9 +56,9 @@ public class Spawner : MonoBehaviour
             {
                 // 1,2,3층 한번에 스폰
                 float spawnY = Random.Range
-                    (-5.5f, 26.5f);
+                    (-1.5f, 52.2f);
                 float spawnX = Random.Range
-                    (-9.5f, 9.9f);
+                    (-9.5f, 9.5f);
 
                 Vector2 spawnPosition = new Vector2(spawnX, spawnY);
                 Instantiate(MoneyList[i], spawnPosition, Quaternion.identity);
