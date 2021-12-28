@@ -29,14 +29,14 @@ public class ObstacleCollider_LJY : MonoBehaviour
             //UnityEngine.Debug.Log("플레이어와 충돌!!");
             //spriteRenderer = GameObject.Find("Surfer").GetComponent<Sprite>();
             spriteRenderer.sprite = sprites[1];
-            Invoke("ReturnSprite", 0.5f);
+            Invoke("ReturnSprite", 1f);
             UnityEngine.Debug.Log("이미지 잘 바뀜");
             PlayerController.Instance.playerData.lives--;
             UnityEngine.Debug.Log("지금 현재 남은 목숨: "+ PlayerController.Instance.playerData.lives);
             Destroy(gameObject);
-            /*
-            if(PlayerController.Instance.playerData.lives<=0)
-                CallGameOver();*/
+
+            if (PlayerController.Instance.playerData.lives <= 0)
+                PlayerController.Instance.playerData.game_over = true;
         }
         else if(collision.gameObject.tag == "Wall")
         {
@@ -54,11 +54,12 @@ public class ObstacleCollider_LJY : MonoBehaviour
         spriteRenderer.sprite = sprites[0];
 
     }
-
+    /*
     void CallGameOver()
     {
         UnityEngine.Debug.Log("게임오버..");
         PauseUI = GameObject.Find("BlackTransparent_pause").GetComponent<GameObject>();
         PauseUI.SetActive(true);
     }
+    */
 }
