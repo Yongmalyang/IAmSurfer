@@ -27,6 +27,20 @@ public class ManageHealth_LJY : MonoBehaviour
         if (PlayerController.Instance.playerData.game_over == true)
         {
             GameOverPanel.gameObject.SetActive(true);
+            GameDataReset();
+        }
+    }
+
+    void GameDataReset()
+    {
+        PlayerController.Instance.playerData.score = 0;
+        PlayerController.Instance.playerData.money = 0;
+        PlayerController.Instance.playerData.lives = 3;
+        PlayerController.Instance.playerData.game_over = false;
+
+        for (int j = 0; j<3; j++)
+        {
+            MyHealth[j].gameObject.SetActive(true);
         }
     }
 }

@@ -9,6 +9,8 @@ public class ObstacleCollider_LJY : MonoBehaviour
     private GameObject PauseUI;
     private SpriteRenderer spriteRenderer;
 
+    //public Image Surfer;
+
     public Sprite[] sprites;
     Rigidbody2D rigid;
     
@@ -16,6 +18,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
     {
         //spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
+        //spriteRenderer = Surfer.GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         //transform.rotation = Quaternion.Euler(0, 0, 30);
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -28,6 +31,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
         {
             //UnityEngine.Debug.Log("플레이어와 충돌!!");
             //spriteRenderer = GameObject.Find("Surfer").GetComponent<Sprite>();
+            spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = sprites[1];
             Invoke("ReturnSprite", 1f);
             UnityEngine.Debug.Log("이미지 잘 바뀜");
@@ -51,6 +55,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
 
     void ReturnSprite()
     {
+        spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprites[0];
 
     }
