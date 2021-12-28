@@ -44,10 +44,12 @@ public class ObstacleCollider_LJY : MonoBehaviour
             if (PlayerController.Instance.playerData.lives <= 0)
             {
                 PlayerController.Instance.playerData.game_over = true;
+                Time.timeScale = 0;
                 int final_score = PlayerController.Instance.playerData.score + PlayerController.Instance.playerData.money * 2;
                 ScoreText = GameObject.Find("PlayerFinalScore").GetComponent<TextMeshProUGUI>();
-                ScoreText.text = "COIN "+PlayerController.Instance.playerData.money.ToString()+"* 2 + SCORE "
-                    + PlayerController.Instance.playerData.score.ToString()+"\nYOUR SCORE: "+final_score.ToString();
+                //ScoreText.text = "COIN "+PlayerController.Instance.playerData.money.ToString()+"* 2 + SCORE "
+                //+ PlayerController.Instance.playerData.score.ToString()+"\nYOUR SCORE: "+final_score.ToString();
+                ScoreText.text = "YOUR SCORE";
                 if (final_score> PlayerController.Instance.playerData.best_score)
                 {
                     PlayerController.Instance.playerData.best_score = final_score;

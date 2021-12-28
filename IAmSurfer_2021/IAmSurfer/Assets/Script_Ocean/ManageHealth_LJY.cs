@@ -47,4 +47,15 @@ public class ManageHealth_LJY : MonoBehaviour
             MyHealth[j+3].gameObject.SetActive(false);
         }
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+
+    }
 }
