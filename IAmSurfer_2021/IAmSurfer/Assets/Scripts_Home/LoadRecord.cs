@@ -13,7 +13,7 @@ public class LoadRecord : MonoBehaviour
     public void click_record()
     {
         txt_record = GetComponent<TMP_Text>();
-        //resource = PlayerController.Instance.playerData.score;
-        //txt_record.text = resource.ToString();
+        resource = PlayerController.Instance.playerData.score;
+        txt_record.text = resource.ToString();
     }
 }
