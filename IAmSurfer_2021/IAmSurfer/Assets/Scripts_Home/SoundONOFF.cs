@@ -15,21 +15,20 @@ public class SoundONOFF : MonoBehaviour
     }
     public void click_sound()
     {
+        PlayerController.Instance.playerData.sound = !PlayerController.Instance.playerData.sound;
         change(PlayerController.Instance.playerData.sound);
     }
     public void change(bool sound)
     {
         if(sound)//사운드가 켜져있을 때
         {
-            PlayerController.Instance.playerData.sound = false;
-            soundIcon.sprite = sound_off;
+            soundIcon.sprite = sound_on;
 
         }
 
         else//사운드 꺼져있을 때
         {
-            PlayerController.Instance.playerData.sound = true;
-            soundIcon.sprite = sound_on;
+            soundIcon.sprite = sound_off;
         }
     }
 
