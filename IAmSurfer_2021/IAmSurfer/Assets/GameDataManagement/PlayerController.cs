@@ -145,5 +145,7 @@ public class PlayerController : MonoBehaviour
         public int lives = 3;
         public int score = 0;
         public int money = 0;
+        public int best_score = 0;
+        public bool sound = true;
     }
 }
