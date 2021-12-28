@@ -10,8 +10,11 @@ public class HealthDown : MonoBehaviour
     BoxCollider2D boxCollider;
     GameManager gameManager;
     PlayerMove player;
+    public GameObject joystick;
     public GameManager gameControllor;
     public Image[] UILives;
+    public AudioSource sound_attack;
+    public AudioSource sound_gameover;
 
     void Start()
     {
@@ -60,14 +63,17 @@ public class HealthDown : MonoBehaviour
 
             Invoke("OffDamaged", 3); //무적 타임 3초 후 해제
 
+
             if (PlayerController.Instance.playerData.lives == 3) //목숨 3개일 때
             {
+                sound_attack.Play();
                 PlayerController.Instance.playerData.lives--; //목숨 하나 감소
                 UILives[2].color = new Color(1, 1, 1, 0);
                 Debug.Log("남은 목숨은" + PlayerController.Instance.playerData.lives + "개입니다."); //남은 목숨 표시
             }
             else if(PlayerController.Instance.playerData.lives == 2) // 남은 목숨 2개일 경우
             {
+                sound_attack.Play();
                 PlayerController.Instance.playerData.lives--; //목숨 하나 감소
                 UILives[2].color = new Color(1, 1, 1, 0);
                 UILives[1].color = new Color(1, 1, 1, 0);
@@ -75,9 +81,11 @@ public class HealthDown : MonoBehaviour
             }
             else if(PlayerController.Instance.playerData.lives == 1)//남은 목숨 1개였을 경우
             {
+                sound_gameover.Play();
                 PlayerController.Instance.playerData.lives--;
                 UILives[0].color = new Color(1, 1, 1, 0);
                 player.OnDie();
+                joystick.SetActive(false);
                 Debug.Log("게임 오버");
                 //게임 오버일 때 보여줄 함수 호출
             }
