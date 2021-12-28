@@ -148,5 +148,6 @@ public class PlayerController : MonoBehaviour
         public int best_score = 0;
         public bool sound = true;
         public bool game_over = false;
+        public bool game_continue = false;
     }
 }
