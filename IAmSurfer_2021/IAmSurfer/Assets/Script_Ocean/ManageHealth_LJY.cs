@@ -11,7 +11,8 @@ public class ManageHealth_LJY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameDataReset();
+        if(PlayerController.Instance.playerData.game_continue == false)
+            GameDataReset();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class ManageHealth_LJY : MonoBehaviour
         if (PlayerController.Instance.playerData.game_over == true)
         {
             GameOverPanel.gameObject.SetActive(true);
+            PlayerController.Instance.playerData.game_continue = false;
             GameDataReset();
         }
     }

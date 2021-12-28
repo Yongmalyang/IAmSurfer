@@ -40,7 +40,15 @@ public class ObstacleCollider_LJY : MonoBehaviour
             Destroy(gameObject);
 
             if (PlayerController.Instance.playerData.lives <= 0)
+            {
                 PlayerController.Instance.playerData.game_over = true;
+                int final_score = PlayerController.Instance.playerData.score + PlayerController.Instance.playerData.money * 2;
+                if(final_score> PlayerController.Instance.playerData.best_score)
+                {
+                    PlayerController.Instance.playerData.best_score = final_score;
+                    UnityEngine.Debug.Log("최고 기록 갱신!!");
+                }
+            }
         }
         else if(collision.gameObject.tag == "Wall")
         {

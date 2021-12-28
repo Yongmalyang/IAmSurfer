@@ -25,7 +25,7 @@ public class BlueHoleCollider_LJY : MonoBehaviour
             //UnityEngine.Debug.Log("지금 현재 남은 목숨: " + PlayerController.Instance.playerData.lives);
             //Destroy(gameObject);
             SceneManager.LoadScene("LoadingScene1");
-
+            PlayerController.Instance.playerData.game_continue = true;
         }
         else if (collision.gameObject.tag == "Wall")
         {
