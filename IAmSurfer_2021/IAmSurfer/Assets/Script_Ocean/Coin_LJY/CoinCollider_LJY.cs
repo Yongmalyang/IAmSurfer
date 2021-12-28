@@ -9,15 +9,15 @@ public class CoinCollider_LJY : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
     private TextMeshProUGUI CoinText;
-    public AudioClip audioCoin;
+    //public AudioClip audioCoin;
 
-    AudioSource audioSource;
+    public AudioSource sound_coin;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
-        audioSource=GetComponent<AudioSource>();
+        //audioSource=GetComponent<AudioSource>();
 
     }
 
@@ -33,8 +33,9 @@ public class CoinCollider_LJY : MonoBehaviour
             CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
             CoinText.text = PlayerController.Instance.playerData.money.ToString();
             gameObject.SetActive(false);
-            audioSource.clip=audioCoin;
-            audioSource.Play();
+            sound_coin.Play();
+            //audioSource.clip=audioCoin;
+            //audioSource.Play();
         }
     }
 }

@@ -15,6 +15,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
 
     public Sprite[] sprites;
     Rigidbody2D rigid;
+    //private AudioSource sound_attack;
     
     void Awake()
     {
@@ -22,15 +23,18 @@ public class ObstacleCollider_LJY : MonoBehaviour
         spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
         //spriteRenderer = Surfer.GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
+        //sound_attack = GameObject.Find("sound_attck").GetComponent<AudioSource>();
         //transform.rotation = Quaternion.Euler(0, 0, 30);
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
     
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         //UnityEngine.Debug.Log("일단 충돌..");
         if (collision.gameObject.tag == "Player")
         {
+            //sound_attack.Play();
             //UnityEngine.Debug.Log("플레이어와 충돌!!");
             //spriteRenderer = GameObject.Find("Surfer").GetComponent<Sprite>();
             spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
