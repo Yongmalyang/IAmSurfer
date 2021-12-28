@@ -11,7 +11,7 @@ public class ManageHealth_LJY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameDataReset();
     }
 
     // Update is called once per frame
