@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ManageHealth_LJY : MonoBehaviour
 {
+    private TextMeshProUGUI ScoreText;
+    private TextMeshProUGUI CoinText;
+
     public Image[] MyHealth;
     public Image GameOverPanel;
 
@@ -57,6 +61,10 @@ public class ManageHealth_LJY : MonoBehaviour
 
     public void Restart()
     {
+        ScoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        ScoreText.text = "0";
+        CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
+        CoinText.text = "0";
         Time.timeScale = 1;
 
     }
