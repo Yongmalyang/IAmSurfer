@@ -8,7 +8,7 @@ public class wait_black : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Wait2Sec",2f);
+        Invoke("Wait5Sec",5f);
         SceneManager.LoadScene("haeun_new");
 
     }
