@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: bd0948da4897f614a9dfa3c81e827235
   - enabled: 1
-    path: Assets/Scenes_haeun/haeun_new.unity
+    path: Assets/Scenes/haeun_new.unity
     guid: 108f66547ffc3874d9d199cbc0c40b57
   - enabled: 1
     path: Assets/Scenes/LoadingScene1.unity
