@@ -8,7 +8,7 @@ public class wait_black : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Invoke("Update", 10f);
+       Invoke("Update", 100);
        Debug.Log("Will Scene Change after 10 seconds");
 
     }

@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class wait_white : MonoBehaviour
+public class wait2 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-       Invoke("Update", 60);
-       Debug.Log("Will Scene Change after 5 seconds");
-
+        StartCoroutine (waitWHITE());
+    }
+    
+    public IEnumerator waitWHITE()
+    {
+        yield return new WaitForSeconds (1f);
+        GoOceanMap();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GoOceanMap()
     {
         SceneManager.LoadScene("OceanMap");
     }
+  
 }
