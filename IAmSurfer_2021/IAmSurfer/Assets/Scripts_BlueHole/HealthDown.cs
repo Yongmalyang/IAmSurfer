@@ -61,7 +61,7 @@ public class HealthDown : MonoBehaviour
             spriteRenderer.color = new Color(1, 0, 0, 0.4f); //플레이어 색 변화
             gameObject.layer = 8; //OnDamaged layer로 바꿔줌으로써 잠시 무적타임
 
-            Invoke("OffDamaged", 3); //무적 타임 3초 후 해제
+            Invoke("OffDamaged", 1f); //무적 타임 1.5초 후 해제
 
 
             if (PlayerController.Instance.playerData.lives == 3) //목숨 3개일 때
