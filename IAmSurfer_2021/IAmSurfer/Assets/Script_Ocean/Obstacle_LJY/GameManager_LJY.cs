@@ -26,7 +26,8 @@ public class GameManager_LJY : MonoBehaviour
         if (curSpawnDelay > maxSpawnDelay) {
             SpawnObstacle();
             //UnityEngine.Debug.Log("스폰성공");
-            maxSpawnDelay = Random.Range(0.5f, 3f);
+            //maxSpawnDelay = Random.Range(0.5f, 3f);
+            maxSpawnDelay = 0.5f;
             curSpawnDelay = 0;
         }
     }
