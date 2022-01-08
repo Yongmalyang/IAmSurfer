@@ -8,14 +8,14 @@ public class wait_white : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Wait5Sec",5f);
-        SceneManager.LoadScene("OceanMap");
+       Invoke("Update", 5);
+       Debug.Log("Will Scene Change after 5 seconds");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SceneManager.LoadScene("OceanMap");
     }
 }
