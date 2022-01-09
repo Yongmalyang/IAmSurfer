@@ -17,8 +17,10 @@ public class ManageHealth_LJY : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        if (PlayerController.Instance.playerData.game_continue == false)
+        if (PlayerController.Instance.playerData.game_continue == false) {
             GameDataReset();
+            SetOceanHearts();
+        }
     }
 
     // Update is called once per frame
@@ -36,21 +38,26 @@ public class ManageHealth_LJY : MonoBehaviour
         {
             GameOverPanel.gameObject.SetActive(true);
             PlayerController.Instance.playerData.game_continue = false;
-            GameDataReset();
+            //GameDataReset();
         }
     }
 
-    void GameDataReset()
+    public void GameDataReset()
     {
         PlayerController.Instance.playerData.score = 0;
         PlayerController.Instance.playerData.money = 0;
         PlayerController.Instance.playerData.lives = 3;
         PlayerController.Instance.playerData.game_over = false;
 
-        for (int j = 0; j<3; j++)
+
+    }
+
+    public void SetOceanHearts()
+    {
+        for (int j = 0; j < 3; j++)
         {
             MyHealth[j].gameObject.SetActive(true);
-            MyHealth[j+3].gameObject.SetActive(false);
+            MyHealth[j + 3].gameObject.SetActive(false);
         }
     }
 
