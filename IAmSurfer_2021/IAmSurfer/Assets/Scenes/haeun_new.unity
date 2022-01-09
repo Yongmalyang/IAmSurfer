@@ -2823,6 +2823,9 @@ MonoBehaviour:
   - {fileID: 2081141786}
   - {fileID: 1394736582}
   - {fileID: 1961979623}
+  - {fileID: 1663023741}
+  - {fileID: 1307245581}
+  - {fileID: 1256167832}
   sound_attack: {fileID: 1162561615}
   sound_gameover: {fileID: 1341055944}
 --- !u!50 &863071153

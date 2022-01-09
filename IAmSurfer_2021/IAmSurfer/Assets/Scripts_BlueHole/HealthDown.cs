@@ -34,21 +34,38 @@ public class HealthDown : MonoBehaviour
     {
         if (PlayerController.Instance.playerData.lives == 3)
         {
-            UILives[2].color = new Color(1, 1, 1, 1);
-            UILives[1].color = new Color(1, 1, 1, 1);
-            UILives[0].color = new Color(1, 1, 1, 1);
+            for (int j = 0; j < 3; j++)
+            {
+                UILives[j].gameObject.SetActive(true);
+                UILives[j + 3].gameObject.SetActive(false);
+            }
         }
         else if(PlayerController.Instance.playerData.lives == 2)
         {
-            UILives[2].color = new Color(1, 1, 1, 0);
-            UILives[1].color = new Color(1, 1, 1, 1);
-            UILives[0].color = new Color(1, 1, 1, 1);
+            for (int j = 0; j < 2; j++)
+            {
+                UILives[j].gameObject.SetActive(true);
+                UILives[j + 3].gameObject.SetActive(false);
+            }
+            for(int j = 2; j >= 2; j--)
+            {
+                UILives[j + 3].gameObject.SetActive(true);
+                UILives[j].gameObject.SetActive(false);
+            }
+
         }
         else if(PlayerController.Instance.playerData.lives == 1)
         {
-            UILives[2].color = new Color(1, 1, 1, 0);
-            UILives[1].color = new Color(1, 1, 1, 0);
-            UILives[0].color = new Color(1, 1, 1, 1);
+            for (int j = 0; j < 1; j++)
+            {
+                UILives[j].gameObject.SetActive(true);
+                UILives[j + 3].gameObject.SetActive(false);
+            }
+            for(int j = 2; j >= 1; j--)
+            {
+                UILives[j + 3].gameObject.SetActive(true);
+                UILives[j].gameObject.SetActive(false);
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -68,22 +85,30 @@ public class HealthDown : MonoBehaviour
             {
                 sound_attack.Play();
                 PlayerController.Instance.playerData.lives--; //목숨 하나 감소
-                UILives[2].color = new Color(1, 1, 1, 0);
+                UILives[2].gameObject.SetActive(false);
+                UILives[5].gameObject.SetActive(true);
                 Debug.Log("남은 목숨은" + PlayerController.Instance.playerData.lives + "개입니다."); //남은 목숨 표시
             }
             else if(PlayerController.Instance.playerData.lives == 2) // 남은 목숨 2개일 경우
             {
                 sound_attack.Play();
                 PlayerController.Instance.playerData.lives--; //목숨 하나 감소
-                UILives[2].color = new Color(1, 1, 1, 0);
-                UILives[1].color = new Color(1, 1, 1, 0);
+                for (int j = 2; j >= 1; j--)
+                {
+                    UILives[j + 3].gameObject.SetActive(true);
+                    UILives[j].gameObject.SetActive(false);
+                }
                 Debug.Log("남은 목숨은" + PlayerController.Instance.playerData.lives + "개입니다."); //남은 목숨 표시
             }
             else if(PlayerController.Instance.playerData.lives == 1)//남은 목숨 1개였을 경우
             {
                 sound_gameover.Play();
                 PlayerController.Instance.playerData.lives--;
-                UILives[0].color = new Color(1, 1, 1, 0);
+                for (int j = 2; j >= 0; j--)
+                {
+                    UILives[j + 3].gameObject.SetActive(true);
+                    UILives[j].gameObject.SetActive(false);
+                }
                 player.OnDie();
                 joystick.SetActive(false);
                 Debug.Log("게임 오버");
