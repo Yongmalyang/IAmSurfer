@@ -79,6 +79,8 @@ public class ObstacleCollider_LJY : MonoBehaviour
         spriteRenderer.sprite = sprites[0];
 
     }
+
+   
     /*
     void CallGameOver()
     {
