@@ -91,5 +91,7 @@ public class ManageHealth_LJY : MonoBehaviour
         ScoreText.text = PlayerController.Instance.playerData.score.ToString();
         CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
         CoinText.text = PlayerController.Instance.playerData.money.ToString();
+        Time.timeScale = 1;
+
     }
 }
