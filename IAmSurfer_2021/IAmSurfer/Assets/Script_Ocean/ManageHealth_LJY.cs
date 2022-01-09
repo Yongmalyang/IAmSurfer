@@ -12,6 +12,9 @@ public class ManageHealth_LJY : MonoBehaviour
     public Image[] MyHealth;
     public Image GameOverPanel;
 
+    SpriteRenderer spriteRenderer;
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +34,6 @@ public class ManageHealth_LJY : MonoBehaviour
 
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -50,7 +52,6 @@ public class ManageHealth_LJY : MonoBehaviour
             //GameDataReset();
         }
     }
-
     public void GameDataReset()
     {
         PlayerController.Instance.playerData.score = 0;
@@ -82,6 +83,10 @@ public class ManageHealth_LJY : MonoBehaviour
         CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
         CoinText.text = "0";
         Time.timeScale = 1;
+        //게임오버 시 불투명했던 플레이어 색 다시 원상복귀
+        spriteRenderer = GameObject.Find("Surfer").GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color(1, 1, 1, 1f);
+
 
     }
 

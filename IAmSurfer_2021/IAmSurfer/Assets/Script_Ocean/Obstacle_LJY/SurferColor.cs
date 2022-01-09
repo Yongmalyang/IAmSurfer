@@ -5,7 +5,7 @@ using UnityEngine;
 public class SurferColor : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
-    private void Awake()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -32,7 +32,7 @@ public class SurferColor : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         PlayerOffDamaged();
     }
-    void PlayerOffDamaged()
+    public void PlayerOffDamaged()
     {
         Debug.Log("플레이어 색 다시 변화");
         spriteRenderer.color = new Color(1, 1, 1, 1f);

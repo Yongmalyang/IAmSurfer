@@ -58,6 +58,7 @@ public class ObstacleCollider_LJY : MonoBehaviour
                 {
                     PlayerController.Instance.playerData.best_score = final_score;
                     UnityEngine.Debug.Log("최고 기록 갱신!!");
+                    Debug.Log("최고기록은" + final_score);
 
                 }
             }
