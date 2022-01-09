@@ -21,6 +21,15 @@ public class ManageHealth_LJY : MonoBehaviour
             GameDataReset();
             SetOceanHearts();
         }
+        else if (PlayerController.Instance.playerData.game_continue == true)
+        {
+            ScoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
+            ScoreText.text = PlayerController.Instance.playerData.score.ToString();
+            CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
+            CoinText.text = PlayerController.Instance.playerData.money.ToString();
+        }
+
+
     }
 
     // Update is called once per frame
@@ -74,5 +83,13 @@ public class ManageHealth_LJY : MonoBehaviour
         CoinText.text = "0";
         Time.timeScale = 1;
 
+    }
+
+    public void ResumeGame()
+    {
+        ScoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        ScoreText.text = PlayerController.Instance.playerData.score.ToString();
+        CoinText = GameObject.Find("Coin Text").GetComponent<TextMeshProUGUI>();
+        CoinText.text = PlayerController.Instance.playerData.money.ToString();
     }
 }
