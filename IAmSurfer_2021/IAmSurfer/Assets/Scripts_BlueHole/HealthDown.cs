@@ -109,10 +109,12 @@ public class HealthDown : MonoBehaviour
                     UILives[j + 3].gameObject.SetActive(true);
                     UILives[j].gameObject.SetActive(false);
                 }
+                //게임 오버일 때 보여줄 함수 호출
                 player.OnDie();
                 joystick.SetActive(false);
                 Debug.Log("게임 오버");
-                //게임 오버일 때 보여줄 함수 호출
+               
+                
             }
         }
     }

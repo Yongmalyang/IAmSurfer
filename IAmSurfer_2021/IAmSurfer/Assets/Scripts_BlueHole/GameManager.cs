@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
     public PlayerMove player;
-    public bool isOver;
     [SerializeField] public TextMeshProUGUI UICoin;
 
     void Update()

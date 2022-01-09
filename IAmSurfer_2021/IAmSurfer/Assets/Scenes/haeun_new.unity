@@ -5843,7 +5843,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 863071159}
-  isOver: 0
   UICoin: {fileID: 1333470292}
 --- !u!4 &1363904335
 Transform:

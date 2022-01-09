@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager_blueHole : MonoBehaviour
 {
-    bool pauseActive = false;
-    public void goToHome()
+     public void goToHome()
     {
         SceneManager.LoadScene("Home");
 
