@@ -1427,7 +1427,6 @@ GameObject:
   - component: {fileID: 353720062}
   - component: {fileID: 353720061}
   - component: {fileID: 353720060}
-  - component: {fileID: 353720059}
   - component: {fileID: 353720063}
   - component: {fileID: 353720065}
   - component: {fileID: 353720066}
@@ -1438,20 +1437,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &353720059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353720058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4913e275989c87f4a87223f01c95f331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraSpeed: 10
-  player: {fileID: 863071151}
 --- !u!81 &353720060
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1511,7 +1496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353720058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.08, y: -0.68, z: -10}
+  m_LocalPosition: {x: 0.9, y: 50.66, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1526,13 +1511,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 353720058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a20e945e04d68d498ad21fd17126755, type: 3}
+  m_Script: {fileID: 11500000, guid: 4def30b9c226e2147aa93e544532847c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 863071158}
-  smoothing: 10
-  maxPosition: {x: 1.09, y: 50.5}
-  minPosition: {x: -1.26, y: -0.68}
+  smoothing: 29
+  maxPosition: {x: 0.9, y: 50.66}
+  minPosition: {x: -1.49, y: -0.62}
 --- !u!114 &353720065
 MonoBehaviour:
   m_ObjectHideFlags: 0
