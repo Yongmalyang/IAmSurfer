@@ -1,11 +1,11 @@
-<h1 align="center">IAmSurfer 🏄‍♀🏄‍♂</h1>
+<h1 align="center">I am Surfer 🏄‍♀🏄‍♂</h1>
 
 >제 2회 MaKING JAM 게임 해커톤(2021.12.26-2021.12.28) <br />
 
 ## 🌊 프로젝트 소개
 
 ## 🌊 팀 소개 
-### 팀 이름: 스대파(스튜디오 대학생 파이터)
+>팀 이름: 스대파(스튜디오 대학생 파이터)
 ### PM
 **이수현** - [@topnotchsh](https://github.com/topnotchsh) - soohyunion@gmail.com<br />
 
@@ -25,4 +25,4 @@
 ## 🌊 인게임 이미지
 
 ## 🌊 게임 플레이 영상
-
+[![Video Label](http://img.youtube.com/vi/9KJUQoXq5V8/0.jpg)](https://www.youtube.com/watch?v=9KJUQoXq5V8)
