@@ -27,10 +27,10 @@
 **이수현** - [@topnotchsh](https://github.com/topnotchsh) - soohyunion@gmail.com<br />
 
 ### Programmer
-**손현서** - [@bboyseo](https://github.com/@bboyseo) - forangeling7@naver.com<br />
-**윤경민** - [@yoongang02](https://github.com/@yoongang02) - yoongang02@gmail.com<br />
-**윤하은** - [@Haeun-Y](https://github.com/@Haeun-Y) - hahaha329@ewhain.net<br />
-**이주연** - [@Yongmalyang](https://github.com/@Yongmalyang) - yongmalyang@gmail.com<br />
+**손현서** - [@bboyseo](https://github.com/bboyseo) - forangeling7@naver.com<br />
+**윤경민** - [@yoongang02](https://github.com/yoongang02) - yoongang02@gmail.com<br />
+**윤하은** - [@Haeun-Y](https://github.com/Haeun-Y) - hahaha329@ewhain.net<br />
+**이주연** - [@Yongmalyang](https://github.com/Yongmalyang) - yongmalyang@gmail.com<br />
 
 ### Graphic
 **허초아** - gjchd@naver.com<br />
